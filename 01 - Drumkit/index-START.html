@@ -55,10 +55,20 @@
   <audio data-key="72" src="sounds/ride.wav"></audio>
   <audio data-key="74" src="sounds/snare.wav"></audio>
   <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+  <audio autoplay ="autoplay" data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-
+  const keyboard = document.getElementsByTagName("div")
+  const audio = document.getElementsByTagName("audio")
+console.log(keyboard)
+  function addEventsPress(){
+    for (let i=0; i< keyboard.length; i++){
+      keyboard[i].addEventListener("click", ()=>{
+        audio[i].autoplay = 
+      })
+    }
+  }
+  addEventsPress()
 </script>
 
 
